@@ -9,8 +9,8 @@ function App() {
   const [subreddit, setSubreddit] = useState('coding');
 
   useEffect(() => {
-    fetch("https://www.reddit.com/r/"+ subreddit +"/.json"). then (res => {
-      if (res.status != 200) {
+    fetch("https://www.reddit.com/r/"+ subreddit +"/.json").then (res => {
+      if (res.status !== 200) {
         console.log("Sorry something went wrong!");
         return;
       }
